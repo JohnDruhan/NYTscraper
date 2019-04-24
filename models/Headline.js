@@ -7,25 +7,25 @@ var mongoose = require("mongoose");
 // Create a schema class using mongoose's schema method
 var Schema = mongoose.Schema;
 
-// Create the headlineSchema with our schema class
+// Create headlineSchema
 var headlineSchema = new Schema({
-  // headline, a string, must be entered
+  // headline string
   headline: {
     type: String,
     required: true,
     unique: { index: { unique: true } }
   },
-  // summary, a string, must be entered
+  // summary string
   summary: {
     type: String,
     required: true
   },
-  // url, a string, must be entered
+  // url string
   url: {
     type: String,
     required: true
   },
-  // date is just a string
+  // date string
   date: {
     type: Date,
     default: Date.now
@@ -36,7 +36,7 @@ var headlineSchema = new Schema({
   }
 });
 
-// Create the Headline model using the headlineSchema
+// Headline model using the headlineSchema
 var Headline = mongoose.model("Headline", headlineSchema);
 
 // Export the Headline model

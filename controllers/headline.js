@@ -1,9 +1,9 @@
-// Controller for our headlines
+// Headlines Controller
 // ============================
 var db = require("../models");
 
 module.exports = {
-  // Find all headlines, sort them by date, send them back to the user
+  // Find headlines, sort by date, send back to user
   findAll: function(req, res) {
     db.Headline
       .find(req.query)
